@@ -32,10 +32,10 @@ app.get('/new-access-code', function(req, res) {
     var cartid     = req.params.cartid;
     // you can then look up customer and cart details in a db etc
     // I'm hardcoding an email here for simplicity
-    amountinkobo = process.env.TEST_AMOUNT * 100;
-    if(isNaN(amountinkobo) || (amountinkobo < 2500)){
-        amountinkobo = 2500;
-    }
+    var amountinkobo = req.params.amount;
+    
+   amountinkobo = amountinkono * 100;
+  
     email = process.env.SAMPLE_EMAIL;
 
     // all fields supported by this call can be gleaned from
