@@ -32,9 +32,10 @@ app.get('/new-access-code', function(req, res) {
     var cartid     = req.params.cartid;
     // you can then look up customer and cart details in a db etc
     // I'm hardcoding an email here for simplicity
-    var amountinkobo = req.params.amount;
-    
-   amountinkobo = amountinkono * 100;
+
+    console.log(req);
+    console.log(req.query.amount);
+    amountinkobo = parseInt(req.query.amount);
   
     email = process.env.SAMPLE_EMAIL;
 
